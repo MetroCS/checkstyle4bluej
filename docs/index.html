@@ -12,7 +12,7 @@
 <body>
 
 <!-- The header -->
-<table border="0" width="100%" summary="header layout">
+<table border="0" summary="header layout">
   <tr>
     <td>
       <h1>BlueJ Checkstyle Extension Home Page</h1>
@@ -24,7 +24,7 @@
 </table>
 
 <!-- content -->
-<table border="0" width="100%" cellpadding="5" summary="body layout">
+<table border="0" cellpadding="5" summary="body layout">
   <tr>
     <!--Left menu-->
     <td valign="top" class="menu">
@@ -51,6 +51,8 @@
 
       <p>Developers</p>
       <ul>
+	<li><a href="https://github.com/MetroCS/checkstyle4bluej">Updated
+          Repository</a></li>
 	<li><a href="http://sourceforge.net/projects/bluejcheckstyle">Project
 	  Page</a></li>
 	<li><a href="http://cvs.sourceforge.net/cgi-bin/viewcvs.cgi/bluejcheckstyle/">CVS
@@ -84,10 +86,10 @@
         that specifies which checks
         are applied to the Java code. The extension distribution includes
         sample configuration files for the
-        <a href="http://java.sun.com/docs/codeconv/">Sun Code Conventions</a>,
+        <a href="http://www.oracle.com/technetwork/java/javase/documentation/codeconvtoc-136057.html">Sun Code Conventions</a>,
         the <a href="http://horstmann.com/bigj/style.html"><i>Big Java</i>
-        Coding Guidelines</a>, and a sample course-specific configuration
-        file used at Virginia Tech.
+        Coding Guidelines</a>, and sample course-specific configuration
+        files used at Virginia Tech and Metro State Denver.
       </p>
       <p class="body">The user can specify the properties file for
       <a href="http://checkstyle.sourceforge.net/config.html#properties">Checkstyle
@@ -121,7 +123,7 @@
 
       <ul>
         <li><p>Download the latest version of the
-          <a href="http://sourceforge.net/project/showfiles.php?group_id=81502&package_id=83415">extension
+          <a href="https://github.com/MetroCS/checkstyle4bluej/raw/master/checkstyle-extension-5.4.1.jar">extension
           jar file</a>.</p>
         <li><p>Place it in BlueJ's extensions directory:</p>
           <ul>
@@ -131,13 +133,14 @@
               installed.</p></li>
             <li><p>Under Mac OSX, place the jar in
               <code>/Applications/BlueJ.app/Contents/Resources/Java/extensions</code>
-              (Control-click <code>BlueJ.app</code> and choose Show Package Contents).</p></li>
+              (Control-click <code>BlueJ.app</code> and choose Show Package Contents)
+              or in <code>~/Library/Preferences/org.bluej/extensions</code>.</p></li>
           </ul>
         <li><p>If you are upgrading from an earlier version, remove the
-          older <code>checkstyle-extension*.jar</code> file, as well as the
-          <code>checkstyle</code> subdirectory, from your extensions directory.
-          If you have added any customized configuration files yourself, be
-          sure to keep them.</p></li>
+          older <code>checkstyle-extension*.jar</code> file from your extensions
+          directory.
+          If you have added any customized configuration files,
+          be sure to keep them.</p></li>
       </ul>
 
       <a  name="using"></a>
