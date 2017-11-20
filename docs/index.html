@@ -5,6 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
 <meta name="keywords" content="inspection, lint"/>
+<meta name="Description" content="Information about the updated Checkstyle Extension for BlueJ" />
 <title>Checkstyle Extension Home Page</title>
 <link rel="stylesheet" type="text/css" href="mystyle.css"/>
 </head>
@@ -15,7 +16,7 @@
 <table border="0" summary="header layout">
   <tr>
     <td>
-      <h1>BlueJ Checkstyle Extension Home Page</h1>
+      <h1>BlueJ Checkstyle Extension - Update Home Page</h1>
     </td>
     <td align="right">
       <img src="logo.png" alt="Checkstyle Logo"/>
@@ -28,7 +29,7 @@
   <tr>
     <!--Left menu-->
     <td valign="top" class="menu">
-      <p>BlueJ Checkstyle Extension</p>
+      <p>BlueJ Checkstyle Extension Update</p>
       <ul>
 	<li><a href="#overview">Overview</a></li>
 	<li><a href="#features">Features</a></li>
@@ -61,10 +62,12 @@
       </ul>
 
       <p>Hosted by:</p>
+      <p><a href="http://github.com"><img
+              src="https://assets-cdn.github.com/images/modules/logos_page/GitHub-Logo.png"
+              width="120" height="30" alt="GitHub Logo"/></a></p>
       <p><a href="http://sourceforge.net">
-      <img src="http://sourceforge.net/sflogo.php?group_id=81502&amp;type=3"
-        width="125" height="37" alt="SourceForge Logo"/></a>
-      </p>
+          <img src="http://sourceforge.net/sflogo.php?group_id=81502&amp;type=3"
+               width="125" height="37" alt="SourceForge Logo"/></a></p>
     </td>
 
     <!--Content-->
@@ -81,7 +84,7 @@
 
       <a name="features"></a>
       <h2>Features</h2>
-      <p class="body">Uses Checkstyle v8.3.</p>
+      <p class="body">Uses Checkstyle <b>v8.4</b>.</p>
       <p class="body">The user can choose the Checkstyle configuration file
         that specifies which checks
         are applied to the Java code. The extension distribution includes
@@ -104,18 +107,21 @@
       <a name="requirements"></a>
       <h2>Requirements</h2>
         <ul>
-          <li><a href="http://bluej.org">BlueJ</a> 4.1 running on JDK 8
-          (1.8.x) or higher.</li>
+          <li><a href="http://bluej.org">BlueJ</a> <b>4.1</b>.x
+            running on <a href="http://www.oracle.com/technetwork/java/javase/overview/index.html">JDK</a>
+            <b>8</b> (1.8.x) or higher.</li>
         </ul>
 
       <a name="download"></a>
       <h2>Download</h2>
 
       <p class="body">
-        The latest release of the BlueJ Checkstyle extension can be downloaded
+        The latest update of the BlueJ Checkstyle extension can be downloaded
         from
         <a href="https://github.com/MetroCS/checkstyle4bluej">the
-        GitHub project page</a>.
+        GitHub repository</a> using this
+        direct link to the
+        <a href="https://github.com/MetroCS/checkstyle4bluej/raw/master/checkstyle-extension-5.4.1.jar">extension jar file</a>.
       </p>
 
       <a name="installation"></a>
@@ -131,10 +137,10 @@
               <code>&lt;BLUEJ_HOME&gt;/lib/extensions</code>, where
               <code>&lt;BLUEJ_HOME&gt;</code> is the directory where BlueJ is
               installed.</p></li>
-            <li><p>Under Mac OSX, place the jar in
+            <li>Under Mac OSX, place the jar in
               <code>/Applications/BlueJ.app/Contents/Resources/Java/extensions</code>
-              (Control-click <code>BlueJ.app</code> and choose Show Package Contents)
-              or in <code>~/Library/Preferences/org.bluej/extensions</code>.</p></li>
+              (control-click <code>BlueJ.app</code> and choose <i>Show Package Contents</i>)
+              or in <code>~/Library/Preferences/org.bluej/extensions</code>.</li>
           </ul>
         <li><p>If you are upgrading from an earlier version, remove the
           older <code>checkstyle-extension*.jar</code> file from your extensions
@@ -159,7 +165,7 @@
 
       	  <ul>
       	    <li><p>The extension uses its built-in
-      	      <a href="https://github.com/MetroCS/checkstyle4bluej/blob/master/cs4250_checks.xml">default_checks.xml</a>
+      	      <a href="https://github.com/MetroCS/checkstyle4bluej/blob/master/docs/default_checks.xml">default_checks.xml</a>
       	      file unless you specify a different configuration file in your
       	      preferences.</p></li>
             <li><p>To specify the Checkstyle configuration file or properties
@@ -174,7 +180,7 @@
               one of these file names with no path or directory in the
               Preferences panel:</p>
               <ul>
-                <li><a href="http://bluejcheckstyle.cvs.sourceforge.net/bluejcheckstyle/bluejcheckstyle/docs/sun_checks.xml?view=markup">sun_checks.xml</a>
+                <li><a href="https://github.com/MetroCS/checkstyle4bluej/blob/master/docs/sun_checks.xml">sun_checks.xml</a>
                   (<a href="http://java.sun.com/docs/codeconv/">Sun code
                   conventions</a>)</li>
                 <li><a href="http://bluejcheckstyle.cvs.sourceforge.net/bluejcheckstyle/bluejcheckstyle/docs/bigjava_checks.xml?view=markup">bigjava_checks.xml</a>
@@ -182,7 +188,7 @@
                   Java</i> coding conventions</a>)</li>
                 <li><a href="http://bluejcheckstyle.cvs.sourceforge.net/bluejcheckstyle/bluejcheckstyle/docs/cs1114_checks.xml?view=markup">cs1114_checks.xml</a>
                   (Virginia Tech CS style)</li>
-                <li><a href="https://github.com/MetroCS/checkstyle4bluej/blob/master/cs4250_checks.xml">cs4250_checks.xml</a>
+                <li><a href="https://github.com/MetroCS/checkstyle4bluej/blob/master/docs/cs4250_checks.xml">cs4250_checks.xml</a>
                   (Metro State Denver CS style)</li>
             </ul></li>
           </ul>

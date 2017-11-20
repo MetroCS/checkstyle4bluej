@@ -4,9 +4,7 @@
           "http://www.puppycrawl.com/dtds/configuration_1_3.dtd">
 
 <!--
-  CS4250 checkstyle configuration
-
-  $Revision$  $LastChangedDate$
+  Default checkstyle configuration
 
   Checks coding conventions from:
 
