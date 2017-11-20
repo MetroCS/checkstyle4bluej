@@ -1,0 +1,3 @@
+Manifest-Version: 1.0
+Main-Class: com.puppycrawl.tools.checkstyle.plugins.bluej.CheckstyleExtension
+Class-Path: checkstyle/checkstyle-all.jar

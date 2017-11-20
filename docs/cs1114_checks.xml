@@ -1,0 +1,261 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+    "-//Puppy Crawl//DTD Check Configuration 1.1//EN"
+    "http://www.puppycrawl.com/dtds/configuration_1_1.dtd">
+
+<!--
+  Checkstyle configuration for CS 1114, Virginia Tech
+-->
+
+<module name="Checker">
+
+    <!-- Checks whether files end with a new line.                        -->
+    <!-- See http://checkstyle.sf.net/config_misc.html#NewlineAtEndOfFile -->
+    <!-- module name="NewlineAtEndOfFile"/
+        Doesn't seem to work under windows or something: false triggering!
+    -->
+
+
+    <module name="FileTabCharacter"/>
+
+    <module name="TreeWalker">
+
+        <property name="tabWidth" value="4" />
+
+        <!-- Checks for Javadoc comments.                     -->
+        <!-- See http://checkstyle.sf.net/config_javadoc.html -->
+        <module name="JavadocMethod">
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="allowThrowsTagsForSubclasses" value="true"/>
+            <!-- property name="allowMissingParamTags" value="true"/-->
+            <property name="allowMissingThrowsTags" value="true"/>
+            <!-- property name="allowMissingReturnTag" value="true"/-->
+            <property name="scope" value="package"/>
+        </module>
+        <module name="JavadocMethod">
+            <property name="allowUndeclaredRTE" value="true"/>
+            <property name="allowThrowsTagsForSubclasses" value="true"/>
+            <property name="allowMissingParamTags" value="true"/>
+            <property name="allowMissingThrowsTags" value="true"/>
+            <property name="allowMissingReturnTag" value="true"/>
+            <property name="excludeScope" value="package"/>
+        </module>
+        <module name="JavadocType">
+            <property name="authorFormat" value="\S"/>
+            <property name="versionFormat" value="\S"/>
+        </module>
+        <module name="JavadocVariable">
+            <property name="scope" value="protected"/>
+        </module>
+        <!-- module name="JavadocStyle">
+            <property name="checkEmptyJavadoc" value="true"/>
+        </module-->
+
+
+        <!-- Checks for Naming Conventions.                  -->
+        <!-- See http://checkstyle.sf.net/config_naming.html -->
+        <module name="ConstantName"/>
+        <module name="LocalFinalVariableName"/>
+        <module name="LocalVariableName"/>
+        <module name="MemberName"/>
+        <module name="MethodName"/>
+        <module name="PackageName"/>
+        <module name="ParameterName"/>
+        <module name="StaticVariableName"/>
+        <module name="TypeName"/>
+
+
+        <!-- Checks for Headers                              -->
+        <!-- See http://checkstyle.sf.net/config_header.html -->
+        <!-- module name="Header" -->
+            <!-- The follow property value demonstrates the ability     -->
+            <!-- to have access to ANT properties. In this case it uses -->
+            <!-- the ${basedir} property to allow Checkstyle to be run  -->
+            <!-- from any directory within a project.                   -->
+            <!-- property name="headerFile" value="${basedir}/java.header"/ -->
+        <!-- /module -->
+
+        <!-- Following interprets the header file as regular expressions. -->
+        <!-- <module name="RegexpHeader"/>                                -->
+
+
+        <!-- Checks for imports                              -->
+        <!-- See http://checkstyle.sf.net/config_import.html -->
+        <!-- module name="AvoidStarImport"/ -->
+        <!-- module name="IllegalImport"/ -->
+					<!-- defaults to sun.* packages -->
+        <!-- module name="RedundantImport"/ -->
+        <!-- module name="UnusedImports"/ -->
+
+
+        <!-- Checks for Size Violations.                    -->
+        <!-- See http://checkstyle.sf.net/config_sizes.html -->
+	<!--
+        <module name="FileLength">
+            <property name="max" value="2700"/>
+        </module>
+	-->
+        <module name="LineLength">
+            <property name="ignorePattern" value="^ *\* *[^ ]+$"/>
+        </module>
+	<!--
+        <module name="MethodLength"/>
+        <module name="ParameterNumber"/>
+	-->
+
+
+        <!-- Checks for whitespace                               -->
+        <!-- See http://checkstyle.sf.net/config_whitespace.html -->
+        <module name="Indentation">
+            <property name="basicOffset" value="4"/>
+            <property name="braceAdjustment" value="0"/>
+            <property name="caseIndent" value="4"/>
+        </module>
+	<!--
+        <module name="EmptyForIteratorPad">
+	    <property name="option" value="space"/>
+	</module>
+	-->
+        <module name="NoWhitespaceAfter">
+            <property name="tokens"
+	              value="BNOT,DEC,DOT,INC,LNOT,UNARY_MINUS,UNARY_PLUS"/>
+            <property name="allowLineBreaks" value="false"/>
+	</module>
+        <module name="NoWhitespaceBefore">
+            <property name="tokens" value="POST_DEC,POST_INC"/>
+	</module>
+        <module name="NoWhitespaceBefore">
+            <property name="tokens" value="DOT"/>
+            <property name="allowLineBreaks" value="true"/>
+        </module>
+	<!--
+        <module name="OperatorWrap"/>
+        <module name="OperatorWrap">
+            <property name="tokens" value="ASSIGN, DIV_ASSIGN, PLUS_ASSIGN, MINUS_ASSIGN, STAR_ASSIGN, MOD_ASSIGN, SR_ASSIGN, BSR_ASSIGN, SL_ASSIGN, BXOR_ASSIGN, BOR_ASSIGN, BAND_ASSIGN"/>
+            <property name="option" value="eol"/>
+        </module>
+        <module name="ParenPad">
+	    <property name="option" value="space"/>
+	</module>
+	-->
+        <module name="WhitespaceAfter">
+	    <property name="tokens" value="COMMA, SEMI"/>
+	</module>
+        <module name="WhitespaceAround">
+            <property name="tokens" value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_ASSERT, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS, MINUS_ASSIGN, MOD, MOD_ASSIGN, NOT_EQUAL, PLUS, PLUS_ASSIGN, RCURLY, SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR, STAR_ASSIGN, TYPE_EXTENSION_AND, QUESTION"/>
+        </module>
+	<module name="MultipleVariableDeclarations"/>
+
+
+        <!-- Modifier Checks                                    -->
+        <!-- See http://checkstyle.sf.net/config_modifiers.html -->
+	<!--
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+	-->
+
+
+        <!-- Checks for blocks. You know, those {}'s         -->
+        <!-- See http://checkstyle.sf.net/config_blocks.html -->
+	<!--
+        <module name="AvoidNestedBlocks">
+	    <property name="allowInSwitchCase" value="true"/>
+	</module>
+	-->
+        <!-- module name="EmptyBlock"/ :let PMD handle these -->
+        <module name="EmptyBlock">
+	    <property name="option" value="text"/>
+	    <property name="tokens" value="LITERAL_CATCH"/>
+	</module>
+        <!-- module name="LeftCurly">
+            <property name="option" value="nl"/>
+        </module -->
+        <module name="NeedBraces">
+            <property name="tokens" value="LITERAL_DO"/>
+        </module>
+        <module name="RightCurly">
+            <property name="option" value="alone"/>
+        </module>
+
+
+        <!-- Checks for common coding problems               -->
+        <!-- See http://checkstyle.sf.net/config_coding.html -->
+        <!-- module name="AvoidInlineConditionals"/ -->
+        <module name="DoubleCheckedLocking"/>
+        <module name="EmptyStatement"/>
+        <!-- module name="EqualsHashCode"/ :let PMD handle this -->
+        <module name="HiddenField">
+            <property name="ignoreConstructorParameter" value="true"/>
+            <property name="ignoreSetter" value="true"/>
+            <property name="ignoreAbstractMethods" value="true"/>
+        </module>
+        <!-- module name="IllegalInstantiation"/ -->
+        <!-- module name="InnerAssignment"/ :let PMD handle this -->
+	<!--
+        <module name="MagicNumber"/>
+	-->
+        <!-- module name="MissingSwitchDefault"/ :let PMD handle this -->
+        <module name="RedundantThrows"/>
+        <!-- module name="SimplifyBooleanExpression"/ :let PMD handle this -->
+        <!-- module name="SimplifyBooleanReturn"/ :let PMD handle this -->
+
+        <!-- Checks for class design                         -->
+        <!-- See http://checkstyle.sf.net/config_design.html -->
+        <!-- module name="DesignForExtension"/ -->
+	<!--
+        <module name="FinalClass"/>
+	-->
+        <!-- module name="HideUtilityClassConstructor"/ -->
+	<!--
+        <module name="InterfaceIsType"/>
+	-->
+        <!-- module name="VisibilityModifier"/ -->
+
+
+        <!-- Miscellaneous other checks.                   -->
+        <!-- See http://checkstyle.sf.net/config_misc.html -->
+        <module name="ArrayTypeStyle"/>
+        <!-- module name="FinalParameters"/ -->
+	<module name="StringLiteralEquality"/>
+	<module name="InnerAssignment"/>
+	<module name="FallThrough"/>
+	<!--
+        <module name="GenericIllegalRegexp">
+            <property name="format" value="\s+$"/>
+            <property name="message" value="Line has trailing spaces."/>
+        </module>
+	-->
+        <module name="TodoComment">
+            <property name="format" value="TODO:|FIX\s*ME"/>
+        </module>
+        <module name="UpperEll"/>
+
+    </module>
+
+    <!-- module name="StrictDuplicateCode"/ -->
+    <module name="RegexpSingleline">
+        <property name="format"
+            value="^\s*\*\s*(Write|Place) a.*here\.\s*$"/>
+        <property name="message"
+            value="Please write your own descriptive comment."/>
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format"
+            value="^\s*\*\s*@author\s+Partner( [1-9])?'s\s+name"/>
+        <property name="message"
+            value="Place your own name (and user name) after the @author tag."/>
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format"
+            value="^\s*\*\s*@author\s+your-(pid|username)"/>
+        <property name="message"
+            value="Place your own name after the @author tag (and your partner's, if this is a lab assignment)."/>
+    </module>
+    <module name="RegexpSingleline">
+        <property name="format"
+            value="^\s*\*\s*@version.*place the date here"/>
+        <property name="message"
+            value="Place the date after the @version tag."/>
+    </module>
+
+</module>

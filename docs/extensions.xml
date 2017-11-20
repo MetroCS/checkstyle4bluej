@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions-list>
+  <extension>
+    <name>Checkstyle</name>
+    <class>com.puppycrawl.tools.checkstyle.plugins.bluej.CheckstyleExtension</class>
+    <version>4.3-0</version>
+    <size>1431052</size>
+    <jarUrl>http://umn.dl.sourceforge.net/sourceforge/bluejcheckstyle/checkstyle-extension-4.3-0.jar</jarUrl>
+    <description>Checks that Java source code adheres to a coding standard</description>
+  </extension>
+</extensions-list>
