@@ -13,7 +13,7 @@ Primary contributors to *this updating effort* were students enrolled in the Fal
 ### Abbreviated Usage Instructions
 #### Overview
 
-The *BlueJ Checkstyle Extension* is a wrapper for [BlueJ](http://blouej.org) to use [Checkstyle](http://checkstyle.sourceforge.net/), a source code analysis tool to help programmers write Java code that adheres to a coding standard.
+The *BlueJ Checkstyle Extension* is a wrapper for [BlueJ](http://bluej.org) to use [Checkstyle](http://checkstyle.sourceforge.net/), a source code analysis tool to help programmers write Java code that adheres to a coding standard.
 
 The user can choose the Checkstyle configuration file that specifies which checks are applied to the Java source code. The extension distribution includes sample configuration files for the Sun Code Conventions, course-specific configuration files used at Virginia Tech and Metro State Denver, and the Big Java Coding Guidelines.
 
